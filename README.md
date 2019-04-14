@@ -6,11 +6,10 @@ How to build -
 - download libTorch - [refer this doc](https://pytorch.org/cppdocs/installing.html)
 - git clone the repo
 - `cd simpleNN-pytorch-cpp` 
-- `cmake -DCMAKE_PREFIX_PATH=/path/to/libtorch ..`
+- `cmake -DCMAKE_PREFIX_PATH=/path/to/libtorch`
 - `mkdir build`
 - `make -j`
 
-after the above steps you will get an executable in `build` folder.
 
 Run - 
 

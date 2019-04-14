@@ -26,7 +26,7 @@ struct Net : torch::nn::Module {
 int main() {
 
   //loading data
-  DataSet data_set("/home/vipul/Documents/vaibhawvipul/DeepLearning/simpleNNPytorchCpp/iris.csv");
+  DataSet data_set("/home/vipul/Documents/vaibhawvipul/DeepLearning/simpleNN-pytorch-cpp/iris.csv");
 
   //loading model 
   auto net = std::make_shared<Net>();
