@@ -42,4 +42,3 @@ frame #15: _start + 0x29 (0x4288e9 in ./simpleNN)
 
 
 ```
-- 
