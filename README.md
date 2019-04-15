@@ -1,5 +1,5 @@
 # simpleNN-pytorch-cpp
-A simple Neural Network in pytorch using cpp frontend
+A simple Neural Network for iris dataset in pytorch using cpp frontend
 
 How to build - 
 
