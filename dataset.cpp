@@ -21,42 +21,18 @@ void DataSet::ReadCSVFile(std::string file_name) {
   std::vector<std::string> lines;
   while(getline(buffer, line, '\n')) {
     lines.push_back(line);
-    //std::cout << line << std::endl;
   }
 
   // the other lines contain the features for each flower
   for (int i = 1; i < lines.size(); ++i) {
     std::vector<float> features = ReadCSVLine(lines[i]);
-    //std::cout << "line is : " << lines[i] << std::endl;
-    //std::cout << "feature[0] is : " << features[0] << std::endl;
-    //std::cout << "feature[1] is : " << features[1] << std::endl;
-    //std::cout << "feature[2] is : " << features[2] << std::endl;
-    //std::cout << "feature[3] is : " << features[3] << std::endl;
-    //std::cout << "feature[4] is : " << features[4] << std::endl;
+    
       x1_.push_back(features[0]);
       x2_.push_back(features[1]);
       x3_.push_back(features[2]);
       x4_.push_back(features[3]);
       y_.push_back(features[4]);
-      /*if (features[4] == 1) {
-        std::vector<float> y_feature;
-        y_feature.push_back(0.0f);
-        y_feature.push_back(0.0f);
-        y_feature.push_back(0.0f);
-        y_.push_back(y_feature);
-      } else if (features[4] == 0.5f){
-        std::vector<float> y_feature;
-        y_feature.push_back(0.0f);
-        y_feature.push_back(1.0f);
-        y_feature.push_back(0.0f);
-        y_.push_back(y_feature);
-      } else {
-        std::vector<float> y_feature;
-        y_feature.push_back(0.0f);
-        y_feature.push_back(0.0f);
-        y_feature.push_back(1.0f);
-        y_.push_back(y_feature);
-      }*/
+      
   }
 }
 

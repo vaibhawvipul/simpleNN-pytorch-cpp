@@ -49,8 +49,6 @@ int main() {
 
   at::TensorOptions options(at::ScalarType::Long);
 
-  //float* data = tensor.data<float>();
-
   input_tensor = torch::from_blob(input_vector.data(),{150,4});
   input_tensor = input_tensor.toType(at::kFloat);
 

@@ -38,7 +38,6 @@ public:
   // normalize a human input using the data set metadata
   std::initializer_list<float> input(float petal_length, float petal_width, float sepal_length, float sepal_width);
 
-  // convert a price outputted by the DNN to a human price
   std::string output(std::vector<float> one_hot_encoding_species);
 private:
   DataSetMetaData data_set_metadata;
