@@ -30,7 +30,7 @@ public:
   std::vector<float>& x2() { return x2_; }
   std::vector<float>& x3() { return x3_; }
   std::vector<float>& x4() { return x4_; }
-  std::vector<std::vector<float>>& y() { return y_; }
+  std::vector<float>& y() { return y_; }
 
   // convert one csv line to a vector of float
   std::vector<float> ReadCSVLine(std::string line);
@@ -46,5 +46,5 @@ private:
   std::vector<float> x2_;
   std::vector<float> x3_;
   std::vector<float> x4_;
-  std::vector<std::vector<float>> y_;
+  std::vector<float> y_;
 };

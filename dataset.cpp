@@ -37,9 +37,11 @@ void DataSet::ReadCSVFile(std::string file_name) {
       x2_.push_back(features[1]);
       x3_.push_back(features[2]);
       x4_.push_back(features[3]);
-      if (features[4] == 1) {
+      y_.push_back(features[4]);
+      /*if (features[4] == 1) {
         std::vector<float> y_feature;
-        y_feature.push_back(1.0f);
+        y_feature.push_back(0.0f);
+        y_feature.push_back(0.0f);
         y_feature.push_back(0.0f);
         y_.push_back(y_feature);
       } else if (features[4] == 0.5f){
@@ -54,7 +56,7 @@ void DataSet::ReadCSVFile(std::string file_name) {
         y_feature.push_back(0.0f);
         y_feature.push_back(1.0f);
         y_.push_back(y_feature);
-      }
+      }*/
   }
 }
 
@@ -68,12 +70,12 @@ std::vector<float> DataSet::ReadCSVLine(std::string line) {
       line_data.push_back(std::stod(cell.c_str()));
     } else{
       if (cell=="setosa"){
-        line_data.push_back(1.0f);
+        line_data.push_back(0.0f);
       } 
       else if (cell == "versicolor") {
-        line_data.push_back(0.5f);
+        line_data.push_back(1.0f);
       } else {
-        line_data.push_back(0.0f);
+        line_data.push_back(2.0f);
       }
     }
   }
